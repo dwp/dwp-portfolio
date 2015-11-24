@@ -6,21 +6,7 @@ var path = require('path'),
     app = express(),
     basicAuth = require('basic-auth-connect'),
     port = (process.env.PORT || 3000),
-
-// Grab environment variables specified in Procfile or as Heroku config vars
-// username = process.env.USERNAME,
-// password = process.env.PASSWORD,
-// env = process.env.NODE_ENV || 'development';
-
-// Authenticate against the environment-provided credentials, if running
-// the app in production (Heroku, effectively)
-// if (env === 'production') {
-//   if (!username || !password) {
-//     console.log('Username or password is not set, exiting.');
-//     process.exit(1);
-//   }
-//   app.use(basicAuth(username, password));
-// }
+    env = process.env.NODE_ENV || 'development';
 
 // Application settings
 app.engine('html', require(__dirname + '/lib/template-engine.js').__express);
