@@ -1,57 +1,58 @@
 // Import GOV.UK elements, this will import the frontend toolkit and some base styles.
 // Take a look at elements.scss to see which files are imported.
 @import 'elements';
-
 // Take a look at patterns.scss to see which files are imported.
 @import 'patterns';
 
-// Set up your main content area <main id="content">
-// This will give you a full width content block
-// See elements _layout.scss line 7.
-
-// If you need it, set up your grid layout - refer to the grid layout usage example
-// See elements _layout.scss line 28.
-
-// If you need a phase banner, put this inside the main content area
-// See elements _layout.scss line 22.
-.phase-banner-alpha  {
-  @include phase-banner(alpha); // Change this to (beta) for a beta banner
-}
-.phase-tag-alpha {
-  @include phase-tag(alpha); // Change this to (beta) for a beta tag
+/*
+  Little tag in header.    
+*/  
+.alpha-tag {
+  background-color:$alpha-colour;
+  color:white;
+  font-size:16px;
+  text-transform:uppercase;
+  line-height:1;
+  padding:4px 6px 1px 5px;
+  margin-left:0.25em;
 }
 
-// If you need to create a page as part of your journey, but without GOV.UK branding
-// See localhost:3000/examples/unbranded/
-.unbranded {
-  background: $white;
-  // Use the universal selector and !important to *ALWAYS OVERRIDE* GDS Transport
-  * {
-    font-family: Arial !important;
-  }
-  // Remove GOV.UK footer styles
-  #footer {
-    border: 0;
-    background: $white;
-  }
+/*
+  Top of the page phase banner bits.
+*/
+.phase {
+  color:white;
+  font-weight:700;
+  padding:0.25em;
+  text-align:center;
 }
-
-// Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you,
-// either add and import new partial files, or modify those in GOV.UK elements to fit your user needs.
-
-// Related links
-// (These styles will be moved to GOV.UK elements, duplicating here for now.)
-.related-links {
-  margin-top: $gutter;
-  border-top: 10px solid $govuk-blue;
-  padding-top: 5px;
-
-  .heading-medium {
-    margin-top: 0.3em;
-    margin-bottom: 0.5em
-  }
-
-  li {
-    margin-bottom: 10px;
-  }
+.phase-discovery {background-color:$discovery-colour;}
+.phase-alpha     {background-color:$alpha-colour;}
+.phase-beta      {background-color:$beta-colour;}
+.phase-live      {background-color:$live-colour;}
+.big_number {
+  font-size:96px;
+  font-weight:700;
+  text-align:center;
 }
+/*
+  Convienience classes for colouring text.
+*/
+.txt-discovery  {color:$discovery-colour}
+.txt-alpha      {color:$alpha-colour}
+.txt-beta       {color:$beta-colour}
+.txt-live       {color:$live-colour}
+/*
+  Lists of links
+*/
+.link-list {
+  border-left:10px solid black;
+  padding:10px;
+  font-size:16px;
+  background-color:$panel-colour;
+  li {margin-bottom:1em;}
+}
+.link-list-discovery {border-color:$discovery-colour;}
+.link-list-alpha     {border-color:$alpha-colour;}
+.link-list-beta      {border-color:$beta-colour;}
+.link-list-live      {border-color:$live-colour;}
