@@ -16,6 +16,7 @@
   padding:4px 6px 1px 5px;
   margin-left:0.25em;
 }
+#global-header-bar {background-color:$turquoise;}
 
 /*
   Top of the page phase banner bits.
@@ -56,3 +57,8 @@
 .link-list-alpha     {border-color:$alpha-colour;}
 .link-list-beta      {border-color:$beta-colour;}
 .link-list-live      {border-color:$live-colour;}
+
+.service-area {
+  border-bottom:1px solid $border-colour;
+  margin-bottom:10px;
+}

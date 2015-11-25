@@ -1,10 +1,10 @@
-{{<layout}}
+{% extends "layout.html" %}
 
-{{$pageTitle}}
-	DWP Digital Portfolio - Home page
-{{/pageTitle}}
+{% block pageTitle %}
+	GOV.UK prototyping kit
+{% endblock %}
 
-{{$content}}
+{% block content %}
 
 <main id="content" role="main">
 
@@ -13,131 +13,65 @@
 	<div class="grid-row">
 		<section class="column-quarter">
 			<div class="phase phase-discovery">Discovery</div>
-			<div class="big_number txt-discovery">4</div>
+			<div class="big_number txt-discovery">{{ counts.discovery }}</div>
 		</section>
 		<section class="column-quarter">
 			<div class="phase phase-alpha">Alpha</div>
-			<div class="big_number txt-alpha">3</div>
+			<div class="big_number txt-alpha">{{ counts.alpha }}</div>
 		</section>
 		<section class="column-quarter">
 			<div class="phase phase-beta">Beta</div>
-			<div class="big_number txt-beta">10</div>
+			<div class="big_number txt-beta">{{ counts.beta }}</div>
 		</section>
 		<section class="column-quarter">
 			<div class="phase phase-live">Live</div>
-			<div class="big_number txt-live">1</div>
+			<div class="big_number txt-live">{{ counts.live }}</div>
 		</section>
 	</div>
 
-	<h2 class="heading-large">Retirement &amp; Pensions</h2>
-	<p>We're helping users to:</p>
-	<div class="grid-row">
-		<section class="column-quarter"> &nbsp; </section>
-		<section class="column-quarter">
-			<ul class="link-list link-list-alpha">
-				<li><a href="">Get your State Pension</a></li>
-			</ul>
-		</section>
-		<section class="column-quarter">
-			<ul class="link-list link-list-beta">
-				<li><a href="">Check your State Pension</a></li>
-				<li><a href="">Find a lost Pension</a></li>
-			</ul>
-		</section>
-		<section class="column-quarter"> &nbsp; </section>
-	</div>
-
-	<h2 class="heading-large">Health &amp; Disability</h2>
-	<p>We're helping users to:</p>
-	<div class="grid-row">
-		<section class="column-quarter">
-			<ul class="link-list link-list-discovery">
-				<li><a href="">Apply for Employment Support Allowance</a></li>
-			</ul>
-		</section>
-		<section class="column-quarter">
-			<ul class="link-list link-list-alpha">
-				<li><a href="">Make a complaint</a></li>
-			</ul>
-		</section>
-		<section class="column-quarter">
-			<ul class="link-list link-list-beta">
-				<li><a href="">Apply for an Access To Work Grant</a></li>
-				<li><a href="">Apply for a Personal Independance Payment</a></li>
-			</ul>
-		</section>
-		<section class="column-quarter">
-			<ul class="link-list link-list-live">
-				<li><a href="">Apply for Carer&rsquo;s Allowance</a></li>
-			</ul>
-		</section>
-	</div>
-
-	<h2 class="heading-large">Fraud &amp; Debt</h2>
-	<p>We're helping users to:</p>
-	<div class="grid-row">
-		<section class="column-quarter">
-			<ul class="link-list link-list-discovery">
-				<li><a href="">Report Benefit Fraud</a></li>
-			</ul>
-		</section>
-		<section class="column-quarter"> &nbsp; </section>
-		<section class="column-quarter">
-			<ul class="link-list link-list-beta">
-				<li><a href="">Repay a benefit debt</a></li>
-				<li><a href="">Real time earnings</a></li>
-			</ul>
-		</section>
-		<section class="column-quarter"> &nbsp; </section>
-	</div>
-
-	<h2 class="heading-large">Unemployment</h2>
-	<p>We're helping users to:</p>
-	<div class="grid-row">
-		<section class="column-quarter">
-			<ul class="link-list link-list-discovery">
-				<li><a href="">Digital service centres</a></li>
-			</ul>
-		</section>
-		<section class="column-quarter">
-			<ul class="link-list link-list-alpha">
-				<li><a href="">Universal Job Match replacement</a></li>
-			</ul>
-		</section>
-		<section class="column-quarter">
-			<ul class="link-list link-list-beta">
-				<li><a href="">Universal Credit</a></li>
-				<li><a href="">Jobseeker Services</a></li>
-				<li><a href="">Apply for a budgeting loan</a></li>
-			</ul>
-		</section>
-		<section class="column-quarter"> &nbsp; </section>
-	</div>
-
-	<h2 class="heading-large">Digital Delivery</h2>
-	<p>We're helping users to:</p>
-	<div class="grid-row">
-		<section class="column-quarter">
-			<ul class="link-list link-list-discovery">
-				<li><a href="">Send payment details as evidence (Enhanced Data)</a></li>
-			</ul>
-		</section>
-		<section class="column-quarter">
-			<ul class="link-list link-list-alpha">
-				<li><a href="">ID / Verification</a></li>
-			</ul>
-		</section>
-		<section class="column-quarter">
-			<ul class="link-list link-list-beta">
-				<li><a href="">Send information securely</a></li>
-				<li><a href="">Jobseeker Services</a></li>
-			</ul>
-		</section>
-		<section class="column-quarter"> &nbsp; </section>
-	</div>
+	{% for name, item in data %}
+		<h2 class="heading-large service-area">{{ name }}</h2>
+			<p>We're helping users to:</p>
+			<div class="grid-row">				
+				<section class="column-quarter">
+					{% if item.discovery %}
+					<ul class="link-list link-list-discovery">
+						{% for bit in item.discovery %}
+							<li><a href="{{ bit.id }}/{{ bit.name | lower | replace(' ','_') }}">{{ bit.name }}</a></li>
+						{% endfor %}						
+					</ul>
+					{% else %}&nbsp;{% endif %}
+				</section>
+				<section class="column-quarter">
+					{% if item.alpha %}
+					<ul class="link-list link-list-alpha">
+						{% for bit in item.alpha %}
+							<li><a href="{{ bit.id }}/{{ bit.name | lower | replace(' ','_') }}">{{ bit.name }}</a></li>
+						{% endfor %}						
+					</ul>
+					{% else %}&nbsp;{% endif %}
+				</section>
+				<section class="column-quarter">
+					{% if item.beta %}
+					<ul class="link-list link-list-beta">
+						{% for bit in item.beta %}
+							<li><a href="{{ bit.id }}/{{ bit.name | lower | replace(' ','_') }}">{{ bit.name }}</a></li>
+						{% endfor %}						
+					</ul>
+					{% else %}&nbsp;{% endif %}
+				</section>
+				<section class="column-quarter">
+					{% if item.live %}
+					<ul class="link-list link-list-live">
+						{% for bit in item.live %}
+							<li><a href="{{ bit.id }}/{{ bit.name | lower | replace(' ','_') }}">{{ bit.name }}</a></li>
+						{% endfor %}						
+					</ul>
+					{% else %}&nbsp;{% endif %}
+				</section>
+			</div>
+	{% endfor %}
 
 </main>
 
-{{/content}}
-
-{{/layout}}
+{% endblock %}
