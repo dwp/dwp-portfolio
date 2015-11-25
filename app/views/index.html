@@ -41,7 +41,7 @@
 					{% if item.discovery %}
 					<ul class="link-list border-discovery">
 						{% for bit in item.discovery %}
-							<li><a href="/projects/{{ bit.id }}/{{ bit.name | lower | replace(' ','_') }}">{{ bit.name }}</a></li>
+							<li><a href="/projects/{{ bit.id }}/{{ bit.name | slugify }}">{{ bit.name }}</a></li>
 						{% endfor %}						
 					</ul>
 					{% else %}&nbsp;{% endif %}
@@ -50,7 +50,7 @@
 					{% if item.alpha %}
 					<ul class="link-list border-alpha">
 						{% for bit in item.alpha %}
-							<li><a href="/projects/{{ bit.id }}/{{ bit.name | lower | replace(' ','_') }}">{{ bit.name }}</a></li>
+							<li><a href="/projects/{{ bit.id }}/{{ bit.name | slugify }}">{{ bit.name }}</a></li>
 						{% endfor %}						
 					</ul>
 					{% else %}&nbsp;{% endif %}
@@ -59,7 +59,7 @@
 					{% if item.beta %}
 					<ul class="link-list border-beta">
 						{% for bit in item.beta %}
-							<li><a href="/projects/{{ bit.id }}/{{ bit.name | lower | replace(' ','_') }}">{{ bit.name }}</a></li>
+							<li><a href="/projects/{{ bit.id }}/{{ bit.name | slugify }}">{{ bit.name }}</a></li>
 						{% endfor %}						
 					</ul>
 					{% else %}&nbsp;{% endif %}
@@ -68,7 +68,7 @@
 					{% if item.live %}
 					<ul class="link-list border-live">
 						{% for bit in item.live %}
-							<li><a href="/projects/{{ bit.id }}/{{ bit.name | lower | replace(' ','_') }}">{{ bit.name }}</a></li>
+							<li><a href="/projects/{{ bit.id }}/{{ bit.name | slugify }}">{{ bit.name }}</a></li>
 						{% endfor %}						
 					</ul>
 					{% else %}&nbsp;{% endif %}
