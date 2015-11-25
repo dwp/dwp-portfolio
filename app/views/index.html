@@ -8,23 +8,27 @@
 
 <main id="content" role="main">
 
-	<p style="margin-top:30px;">These are all the things we're doing:</p>
+	{% if view == 'theme' %}
+	<p style="margin-top:30px;">These are all the things we're doing (<a href="/location/">order by location</a>)</p>
+	{% else %}
+	<p style="margin-top:30px;">These are all the things we're doing (<a href="/">order by theme</a>)</p>
+	{% endif %}
 
 	<div class="grid-row">
 		<section class="column-quarter">
-			<div class="phase phase-discovery">Discovery</div>
+			<div class="tag discovery">Discovery</div>
 			<div class="big_number txt-discovery">{{ counts.discovery }}</div>
 		</section>
 		<section class="column-quarter">
-			<div class="phase phase-alpha">Alpha</div>
+			<div class="tag alpha">Alpha</div>
 			<div class="big_number txt-alpha">{{ counts.alpha }}</div>
 		</section>
 		<section class="column-quarter">
-			<div class="phase phase-beta">Beta</div>
+			<div class="tag beta">Beta</div>
 			<div class="big_number txt-beta">{{ counts.beta }}</div>
 		</section>
 		<section class="column-quarter">
-			<div class="phase phase-live">Live</div>
+			<div class="tag live">Live</div>
 			<div class="big_number txt-live">{{ counts.live }}</div>
 		</section>
 	</div>
@@ -35,36 +39,36 @@
 			<div class="grid-row">				
 				<section class="column-quarter">
 					{% if item.discovery %}
-					<ul class="link-list link-list-discovery">
+					<ul class="link-list border-discovery">
 						{% for bit in item.discovery %}
-							<li><a href="{{ bit.id }}/{{ bit.name | lower | replace(' ','_') }}">{{ bit.name }}</a></li>
+							<li><a href="/projects/{{ bit.id }}/{{ bit.name | lower | replace(' ','_') }}">{{ bit.name }}</a></li>
 						{% endfor %}						
 					</ul>
 					{% else %}&nbsp;{% endif %}
 				</section>
 				<section class="column-quarter">
 					{% if item.alpha %}
-					<ul class="link-list link-list-alpha">
+					<ul class="link-list border-alpha">
 						{% for bit in item.alpha %}
-							<li><a href="{{ bit.id }}/{{ bit.name | lower | replace(' ','_') }}">{{ bit.name }}</a></li>
+							<li><a href="/projects/{{ bit.id }}/{{ bit.name | lower | replace(' ','_') }}">{{ bit.name }}</a></li>
 						{% endfor %}						
 					</ul>
 					{% else %}&nbsp;{% endif %}
 				</section>
 				<section class="column-quarter">
 					{% if item.beta %}
-					<ul class="link-list link-list-beta">
+					<ul class="link-list border-beta">
 						{% for bit in item.beta %}
-							<li><a href="{{ bit.id }}/{{ bit.name | lower | replace(' ','_') }}">{{ bit.name }}</a></li>
+							<li><a href="/projects/{{ bit.id }}/{{ bit.name | lower | replace(' ','_') }}">{{ bit.name }}</a></li>
 						{% endfor %}						
 					</ul>
 					{% else %}&nbsp;{% endif %}
 				</section>
 				<section class="column-quarter">
 					{% if item.live %}
-					<ul class="link-list link-list-live">
+					<ul class="link-list border-live">
 						{% for bit in item.live %}
-							<li><a href="{{ bit.id }}/{{ bit.name | lower | replace(' ','_') }}">{{ bit.name }}</a></li>
+							<li><a href="/projects/{{ bit.id }}/{{ bit.name | lower | replace(' ','_') }}">{{ bit.name }}</a></li>
 						{% endfor %}						
 					</ul>
 					{% else %}&nbsp;{% endif %}

@@ -1,0 +1,63 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+	GOV.UK prototyping kit
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+	<h1 class="heading-xlarge" style="margin-bottom:15px;">{{ data.name }}</h1>
+
+	<div class="grid-row">
+		<section class="column-two-thirds">
+			
+			<p>{{ data.description }}</p>
+			
+			<div class="location">Based in <strong>{{ data.location }}</strong></div>
+
+			<div class="phase-history">
+				<div class="phase-history-item border-discovery txt-discovery">
+					<h3><a href="#" class="tag tag-history discovery">discovery</a></h3>
+					<p>Completed: Discovery — Sep 2013</p>
+				</div>
+				<div class="phase-history-item border-alpha txt-alpha">
+					<h3><a href="#" class="tag tag-history alpha">alpha</a></h3>
+					<p>Completed: Alpha — Sep 2013</p>
+				</div>
+				<div class="phase-history-item border-beta txt-beta">
+					<h3><a href="#" class="tag tag-history beta">beta</a></h3>
+					<p>Completed: Beta — Sep 2013</p>
+				</div>
+				<div class="phase-history-item border-live txt-live">
+					<h3><a href="#" class="tag tag-history live">live</a></h3>
+					<p>Completed: Live — Sep 2013</p>
+				</div>
+
+			</div>
+		</section>
+		<section class="column-third">
+
+			<div class="phase-circle">
+				<p class="circle {{ data.phase | lower }}"></p>
+				<p class="circle-label">{{ data.phase | title }}</p>
+			</div>
+
+			<h3 class="heading-small">Senior Responsible Officer</h3>
+			<p>Denholm Elliott</p>
+
+			<h3 class="heading-small">Service Manager</h3>
+			<p>Alec Guinness</p>
+
+			<h3 class="heading-small">Prototype Link</h3>
+			<p><a href="http://asdlsak.herokuapp.com/">http://asdlsak.herokuapp.com/</a></p>
+		</section>
+	</div>
+	
+
+	
+
+</main>
+
+{% endblock %}

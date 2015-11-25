@@ -2,6 +2,9 @@ var express = require('express'),
     router  = express.Router(),
     _       = require('underscore');
 
+  /*
+    - - - - - - - - - -  INDEX PAGE - - - - - - - - - - 
+  */
   router.get('/', function (req, res) 
   {
     var data = _.groupBy(req.app.locals.data, 'theme');
@@ -12,9 +15,12 @@ var express = require('express'),
       newd[key] = item;
     });
     var phases = _.countBy(req.app.locals.data, 'phase');    
-    res.render('index', {"data":newd, "counts":phases});  
+    res.render('index', {"data":newd, "counts":phases, "view":"theme"});  
   });
 
+  /*
+    - - - - - - - - - -  LOCATION INDEX PAGE - - - - - - - - - - 
+  */
   router.get('/location/', function (req, res) 
   {
     var data = _.groupBy(req.app.locals.data, 'location');
@@ -25,12 +31,16 @@ var express = require('express'),
       newd[key] = item;
     });
     var phases = _.countBy(req.app.locals.data, 'phase');  
-    res.render('index', {"data":newd, "counts":phases});  
+    res.render('index', {"data":newd, "counts":phases, "view":"location"});  
   });
 
-  router.get('/location/', function (req, res) 
-  {
-
+  /*
+    - - - - - - - - - -  PROJECT PAGE - - - - - - - - - - 
+  */
+  router.get('/projects/:id/:slug', function (req, res) 
+  {    
+    var data = _.findWhere(req.app.locals.data, {id:parseInt(req.params.id)});
+    res.render('project', {"data":data, "slug":req.params.slug});  
   });
 
 module.exports = router;

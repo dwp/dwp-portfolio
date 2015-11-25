@@ -13,7 +13,7 @@
   font-size:16px;
   text-transform:uppercase;
   line-height:1;
-  padding:4px 6px 1px 5px;
+  padding:2px 8px 0;
   margin-left:0.25em;
 }
 #global-header-bar {background-color:$turquoise;}
@@ -21,16 +21,19 @@
 /*
   Top of the page phase banner bits.
 */
-.phase {
-  color:white;
+.tag {  
+  color:white !important;
   font-weight:700;
   padding:0.25em;
   text-align:center;
+  text-decoration:none;
+  text-transform:uppercase;
 }
-.phase-discovery {background-color:$discovery-colour;}
-.phase-alpha     {background-color:$alpha-colour;}
-.phase-beta      {background-color:$beta-colour;}
-.phase-live      {background-color:$live-colour;}
+.tag.discovery {background-color:$discovery-colour;}
+.tag.alpha     {background-color:$alpha-colour;}
+.tag.beta      {background-color:$beta-colour;}
+.tag.live      {background-color:$live-colour;}
+
 .big_number {
   font-size:96px;
   font-weight:700;
@@ -53,12 +56,72 @@
   background-color:$panel-colour;
   li {margin-bottom:1em;}
 }
-.link-list-discovery {border-color:$discovery-colour;}
-.link-list-alpha     {border-color:$alpha-colour;}
-.link-list-beta      {border-color:$beta-colour;}
-.link-list-live      {border-color:$live-colour;}
+
 
 .service-area {
   border-bottom:1px solid $border-colour;
   margin-bottom:10px;
+}
+
+.location {
+  display:inline-block;
+  background-color:$turquoise;
+  color:white;
+  font-weight:normal;
+  text-transform:none;
+  padding:2px 8px 0;
+  strong {font-size:24px; font-weight:700}
+}
+
+.phase-history {
+  clear:both;
+  margin-top:30px;
+} 
+
+.phase-history-item {
+  padding-left:10px;
+  border-left:5px solid black;
+  margin-bottom:0;
+  padding-bottom:10px;
+}
+
+.tag-history {
+  display:inline-block;
+  margin-left:-10px;
+  padding:4px 10px 2px;
+}
+
+.border-discovery {border-color:$discovery-colour;}
+.border-alpha     {border-color:$alpha-colour;}
+.border-beta      {border-color:$beta-colour;}
+.border-live      {border-color:$live-colour;}
+
+.circle.discovery {background-color:$discovery-colour;}
+.circle.alpha     {background-color:$alpha-colour;}
+.circle.beta      {background-color:$beta-colour;}
+.circle.live      {background-color:$live-colour;}
+
+.phase-circle {
+  width:40%;
+  position:relative;
+}
+.circle-label {
+  position:absolute;
+  top:50%; left:0;
+  width:100%;
+  margin-top:-15px;
+  text-align:center;
+  color:white;
+  font-weight:700;
+  font-size:24px;
+}
+.circle {
+  background:red;
+  color:white;
+  width:100%;
+  height:0;
+  padding-top:100%;
+  border-radius:50% 50%;
+  display:inline-block;
+  margin:0;
 }
