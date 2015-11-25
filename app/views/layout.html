@@ -1,14 +1,9 @@
 {% extends "govuk_template.html" %}
 
-{% block head %}
+{% block head %} {% include "includes/head.html" %} {% endblock %}
 
-  {% include "includes/head.html" %}
+{% block header_class %}with-proposition{% endblock %}
 
-{% endblock %}
+{% block proposition_header %} {% include "includes/propositional_navigation_alpha.html" %} {% endblock %}
 
-
-{% block bodyEnd %}
-
-  bodyEnd
-
-{% endblock %}
+{% block bodyEnd %} bodyEnd {% endblock %}
