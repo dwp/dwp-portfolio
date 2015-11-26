@@ -40,7 +40,7 @@ var express = require('express'),
   router.get('/projects/:id/:slug', function (req, res) 
   {    
     var data = _.findWhere(req.app.locals.data, {id:parseInt(req.params.id)});
-    res.render('project', {"data":data, "slug":req.params.slug});  
+    res.render('project', {"data":data});  
   });
 
 module.exports = router;

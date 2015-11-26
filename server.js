@@ -19,6 +19,7 @@ _.each(t,function(el) {
   var file = fs.readFileSync(__dirname + '/lib/projects/'+el).toString();
   try {
     var json = JSON.parse(file);
+    json.filename = el;
     app.locals.data.push(json);
   } catch(err) {
     console.log(err);
