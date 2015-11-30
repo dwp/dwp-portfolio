@@ -17,6 +17,10 @@
   margin-left:0.25em;
 }
 #global-header-bar {background-color:$turquoise;}
+@media (min-width: 769px) {
+  #global-header .header-wrapper .header-global .header-logo {width:100%;}
+}
+#footer {display:none}
 
 /*
   Top of the page phase banner bits.
@@ -125,10 +129,4 @@
   border-radius:50% 50%;
   display:inline-block;
   margin:0;
-}
-@media (min-width: 769px)
-{
-  #global-header .header-wrapper .header-global .header-logo {
-    width:100%;
-  }  
 }
