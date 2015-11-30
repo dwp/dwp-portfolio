@@ -46,13 +46,13 @@
 			</div>
 
 			<h3 class="heading-small">Senior Responsible Officer</h3>
-			<p>Denholm Elliott</p>
+			<p>{{ data.sro | default('Not set') }}</p>
 
 			<h3 class="heading-small">Service Manager</h3>
-			<p>Alec Guinness</p>
+			<p>{{ data.service_man | default('Not set') }}</p>
 
 			<h3 class="heading-small">Prototype Link</h3>
-			<p><a href="http://asdlsak.herokuapp.com/">http://asdlsak.herokuapp.com/</a></p>
+			<p><a href="{{ data.prototype | default('#') }}">{{ data.prototype | default('http://not.set/') }}</a></p>
 
 			<h3 class="heading-small">Github</h3>
 			<p>The <a href="https://github.com/dwpdigitaltech/dwp-portfolio/blob/master/lib/projects/{{data.filename}}">content for this page</a> is kept on github</p>			
