@@ -126,3 +126,9 @@
   display:inline-block;
   margin:0;
 }
+@media (min-width: 769px)
+{
+  #global-header .header-wrapper .header-global .header-logo {
+    width:100%;
+  }  
+}

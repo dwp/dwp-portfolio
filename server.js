@@ -7,7 +7,7 @@ var path        = require('path'),
     routes      = require(__dirname + '/app/routes.js'),
     favicon     = require('serve-favicon'),
     app         = express(),
-    port        = process.env.PORT || 3000,
+    port        = process.env.PORT || 3100,
     env         = process.env.NODE_ENV || 'development';
 
 /*
@@ -97,6 +97,7 @@ if (env === 'production') {
       files:['public/**/*.{js,css}','app/views/**/*.html'],
       ghostmode:{clicks:true, forms: true, scroll:true},
       open:false,
+      port:(port+1),
     });
   });
 }
