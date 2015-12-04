@@ -58,11 +58,11 @@ $backlog-colour: $purple;
   Lists of links
 */
 .link-list {    
-  font-size:16px;
-  background-color:$highlight-colour;
+  font-size:16px;  
   margin-bottom:5px;
   li {
     // margin-bottom:1em;
+    background-color:$highlight-colour;
     border-left:3px solid transparent;
     padding:10px;    
   }
