@@ -8,11 +8,12 @@
 
 <main id="content" role="main">
 
-	{% if view == 'theme' %}
-	<p style="margin-top:30px;">These are all the things we're doing (<a href="/location/">order by location</a>)</p>
-	{% else %}
-	<p style="margin-top:30px;">These are all the things we're doing (<a href="/">order by theme</a>)</p>
-	{% endif %}
+	<p style="margin-top:30px;">
+		These are all the things we're doing 
+		{% if view != 'theme' %}(<a href="/">order by theme</a>){% endif %}
+		{% if view != 'location' %}(<a href="/location/">order by location</a>){% endif %}
+		{% if view != 'priority' %}(<a href="/priority/">order by priority</a>){% endif %}
+	</p>
 
 	<div class="grid-row">
 		<section class="column-fifth">

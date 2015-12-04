@@ -103,7 +103,7 @@ router.get('/priority/', function (req, res)
   res.render('index', {
     "data":new_data, 
     "counts":phases, 
-    "view":"location",
+    "view":"priority",
     "theme_order":priority_order,
     "phase_order":phase_order
     }
