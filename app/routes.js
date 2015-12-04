@@ -2,6 +2,16 @@ var express = require('express'),
     router  = express.Router(),
     _       = require('underscore');
 
+var theme_order = [
+      'Health & Disability',
+      'Working Age',
+      'Retirement Provision',
+      'Fraud & Debt',
+      'Platforms'
+    ];
+
+var phase_order = ['backlog','discovery','alpha','beta','live'];
+
   /*
     - - - - - - - - - -  INDEX PAGE - - - - - - - - - - 
   */
@@ -9,13 +19,28 @@ var express = require('express'),
   {
     var data = _.groupBy(req.app.locals.data, 'theme');
     var newd = {};
+
     _.each(data, function(value, key, list)
     {
       var item = _.groupBy(value,'phase');
-      newd[key] = item;
+      newd[key] = {};
+      _.each(item, function(v,k,l)
+      {        
+        var piece = _.groupBy(v,'facing');
+        newd[key][k] = piece;
+      });
+      // newd[key] = item;
     });
+
     var phases = _.countBy(req.app.locals.data, 'phase');    
-    res.render('index', {"data":newd, "counts":phases, "view":"theme"});  
+    res.render('index', {
+      "data":newd, 
+      "counts":phases, 
+      "view":"theme",
+      "theme_order":theme_order,
+      "phase_order":phase_order
+      }
+    );  
   });
 
   /*
@@ -24,14 +49,24 @@ var express = require('express'),
   router.get('/location/', function (req, res) 
   {
     var data = _.groupBy(req.app.locals.data, 'location');
-    var newd = {};
+    var newd = {}, loc_order = [];
     _.each(data, function(value, key, list)
     {
       var item = _.groupBy(value,'phase');
       newd[key] = item;
+      loc_order.push(key);
     });
+
+    loc_order.sort();
+
     var phases = _.countBy(req.app.locals.data, 'phase');  
-    res.render('index', {"data":newd, "counts":phases, "view":"location"});  
+    res.render('index', {
+      "data":newd, 
+      "counts":phases, 
+      "view":"location",
+      "theme_order":loc_order,
+      "phase_order":phase_order
+    });  
   });
 
   /*

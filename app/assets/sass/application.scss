@@ -60,10 +60,10 @@ $backlog-colour: $purple;
 .link-list {    
   font-size:16px;  
   margin-bottom:5px;
+  background-color:$highlight-colour;
+  border-left:3px solid transparent;
   li {
     // margin-bottom:1em;
-    background-color:$highlight-colour;
-    border-left:3px solid transparent;
     padding:10px;    
   }
 }
@@ -101,12 +101,12 @@ $backlog-colour: $purple;
   padding:4px 10px 2px;
 }
 
-.border-backlog li {border-color:$backlog-colour;}
-.border-discovery li {border-color:$discovery-colour;}
-.border-alpha     li {border-color:$alpha-colour;}
-.border-beta      li {border-color:$beta-colour;}
-.border-live      li {border-color:$live-colour;}
-li.internal          {border-color:$black;}
+.border-backlog   {border-color:$backlog-colour;}
+.border-discovery {border-color:$discovery-colour;}
+.border-alpha     {border-color:$alpha-colour;}
+.border-beta      {border-color:$beta-colour;}
+.border-live      {border-color:$live-colour;}
+.border-internal  {border-color:$black;}
 
 .circle.backlog   {background-color:$backlog-colour;}
 .circle.discovery {background-color:$discovery-colour;}

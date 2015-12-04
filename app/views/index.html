@@ -37,67 +37,40 @@
 		</section>
 	</div>
 
-	{% 
-		set order = [
-			'Health & Disability',
-			'Working Age',
-			'Retirement Provision',
-			'Fraud & Debt',
-			'Platforms'
-		]
-	%}
+	{#
+		theme_order & phase_order are set in routes.js
+		so them can be used in multiple pages.
+	#}
 
-	{% for name in order %}
+	{% for name in theme_order %}
+
 		{% set item = data[name] %}
 		<h2 class="heading-large service-area">{{ name }}</h2>
-			<!-- <p>We're helping users to:</p> -->
-			<div class="grid-row">				
-				<section class="column-fifth">
-					{% if item.backlog %}
-					<ul class="link-list border-backlog">
-						{% for bit in item.backlog %}
-							<li {% if bit.internal %}class="internal"{% endif %}><a href="/projects/{{ bit.id }}/{{ bit.name | slugify }}">{{ bit.name }}</a></li>							
-						{% endfor %}						
-					</ul>
-					{% else %}&nbsp;{% endif %}
-				</section>
-				<section class="column-fifth">
-					{% if item.discovery %}
-					<ul class="link-list border-discovery">
-						{% for bit in item.discovery %}
-							<li {% if bit.internal %}class="internal"{% endif %}><a href="/projects/{{ bit.id }}/{{ bit.name | slugify }}">{{ bit.name }}</a></li>							
-						{% endfor %}						
-					</ul>
-					{% else %}&nbsp;{% endif %}
-				</section>
-				<section class="column-fifth">
-					{% if item.alpha %}
-					<ul class="link-list border-alpha">
-						{% for bit in item.alpha %}
-							<li {% if bit.internal %}class="internal"{% endif %}><a href="/projects/{{ bit.id }}/{{ bit.name | slugify }}">{{ bit.name }}</a></li>
-						{% endfor %}						
-					</ul>
-					{% else %}&nbsp;{% endif %}
-				</section>
-				<section class="column-fifth">
-					{% if item.beta %}
-					<ul class="link-list border-beta">
-						{% for bit in item.beta %}
-							<li {% if bit.internal %}class="internal"{% endif %}><a href="/projects/{{ bit.id }}/{{ bit.name | slugify }}">{{ bit.name }}</a></li>
-						{% endfor %}						
-					</ul>
-					{% else %}&nbsp;{% endif %}
-				</section>
-				<section class="column-fifth">
-					{% if item.live %}
-					<ul class="link-list border-live">
-						{% for bit in item.live %}							
-							<li {% if bit.internal %}class="internal"{% endif %}><a href="/projects/{{ bit.id }}/{{ bit.name | slugify }}">{{ bit.name }}</a></li>
-						{% endfor %}						
-					</ul>
-					{% else %}&nbsp;{% endif %}
-				</section>
-			</div>
+		
+		<div class="grid-row">	
+		{% for phase in phase_order %}
+			
+			<section class="column-fifth">
+			{% if item[phase] %}			
+				
+				<ul class="link-list border-{{phase}}">
+				{% for bit in item[phase]['user'] %}
+					<li><a href="/projects/{{ bit.id }}/{{ bit.name | slugify }}">{{ bit.name }}</a></li>							
+				{% endfor %}
+				</ul>
+
+				<ul class="link-list border-internal">
+				{% for bit in item[phase]['internal'] %}
+					<li><a href="/projects/{{ bit.id }}/{{ bit.name | slugify }}">{{ bit.name }}</a></li>							
+				{% endfor %}
+				</ul>
+
+			{% else %}&nbsp;{% endif %}
+			</section>
+
+		{% endfor %}
+		</div>
+
 	{% endfor %}
 
 </main>

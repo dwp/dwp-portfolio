@@ -1,5 +1,6 @@
 var path        = require('path'),
     fs          = require('fs'),
+    merge       = require('merge'),
     express     = require('express'),
     browserSync = require('browser-sync'),
     nunjucks    = require('express-nunjucks'),
@@ -13,12 +14,19 @@ var path        = require('path'),
 /*
   Load all the project data from the files.
 */
+var defaults = JSON.parse(fs.readFileSync(__dirname + '/lib/projects/defaults.js').toString());
+console.log(defaults);
+
 var t = fs.readdirSync(__dirname + '/lib/projects/');
 app.locals.data = [];
-_.each(t,function(el) {
+_.each(t,function(el) 
+{
+  if (el == 'defaults.js') return;
+
   var file = fs.readFileSync(__dirname + '/lib/projects/'+el).toString();
   try {
-    var json = JSON.parse(file);
+    var json = merge(true,defaults,JSON.parse(file));
+    console.log(json);
     json.filename = el;
     app.locals.data.push(json);
   } catch(err) {

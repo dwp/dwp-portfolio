@@ -26,6 +26,7 @@
     "grunt-text-replace": "0.3.12",
     "hogan.js": "3.0.2",
     "marked": "^0.3.5",
+    "merge": "^1.2.0",
     "minimist": "0.0.8",
     "node-sass": "3.3.3",
     "readdir": "0.0.6",
