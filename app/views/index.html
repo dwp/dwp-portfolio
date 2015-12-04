@@ -56,7 +56,7 @@
 					{% if item.backlog %}
 					<ul class="link-list border-backlog">
 						{% for bit in item.backlog %}
-							{% if bit.internal %} fish {% endif %}
+							{% if bit.internal %} {% endif %}
 							<li><a href="/projects/{{ bit.id }}/{{ bit.name | slugify }}">{{ bit.name }}</a></li>							
 						{% endfor %}						
 					</ul>
@@ -66,7 +66,7 @@
 					{% if item.discovery %}
 					<ul class="link-list border-discovery">
 						{% for bit in item.discovery %}
-							{% if bit.internal %} fish {% endif %}
+							{% if bit.internal %} {% endif %}
 							<li><a href="/projects/{{ bit.id }}/{{ bit.name | slugify }}">{{ bit.name }}</a></li>							
 						{% endfor %}						
 					</ul>
@@ -76,7 +76,7 @@
 					{% if item.alpha %}
 					<ul class="link-list border-alpha">
 						{% for bit in item.alpha %}
-							{% if bit.internal %} fish {% endif %}
+							{% if bit.internal %} {% endif %}
 							<li><a href="/projects/{{ bit.id }}/{{ bit.name | slugify }}">{{ bit.name }}</a></li>
 						{% endfor %}						
 					</ul>
@@ -86,7 +86,7 @@
 					{% if item.beta %}
 					<ul class="link-list border-beta">
 						{% for bit in item.beta %}
-							{% if bit.internal %} fish {% endif %}
+							{% if bit.internal %} {% endif %}
 							<li><a href="/projects/{{ bit.id }}/{{ bit.name | slugify }}">{{ bit.name }}</a></li>
 						{% endfor %}						
 					</ul>
@@ -96,7 +96,7 @@
 					{% if item.live %}
 					<ul class="link-list border-live">
 						{% for bit in item.live %}
-							{% if bit.internal %} fish {% endif %}
+							{% if bit.internal %} {% endif %}
 							<li><a href="/projects/{{ bit.id }}/{{ bit.name | slugify }}">{{ bit.name }}</a></li>
 						{% endfor %}						
 					</ul>
