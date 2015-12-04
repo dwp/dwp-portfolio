@@ -57,15 +57,16 @@ $backlog-colour: $purple;
 /*
   Lists of links
 */
-.link-list {
-  border-left:3px solid black;
-  padding:10px;
+.link-list {    
   font-size:16px;
   background-color:$highlight-colour;
   margin-bottom:5px;
-  li {margin-bottom:1em;}
+  li {
+    // margin-bottom:1em;
+    border-left:3px solid transparent;
+    padding:10px;    
+  }
 }
-
 
 .service-area {
   border-bottom:1px solid $border-colour;
@@ -100,11 +101,14 @@ $backlog-colour: $purple;
   padding:4px 10px 2px;
 }
 
-.border-discovery {border-color:$discovery-colour;}
-.border-alpha     {border-color:$alpha-colour;}
-.border-beta      {border-color:$beta-colour;}
-.border-live      {border-color:$live-colour;}
+.border-backlog li {border-color:$backlog-colour;}
+.border-discovery li {border-color:$discovery-colour;}
+.border-alpha     li {border-color:$alpha-colour;}
+.border-beta      li {border-color:$beta-colour;}
+.border-live      li {border-color:$live-colour;}
+li.internal          {border-color:$black;}
 
+.circle.backlog   {background-color:$backlog-colour;}
 .circle.discovery {background-color:$discovery-colour;}
 .circle.alpha     {background-color:$alpha-colour;}
 .circle.beta      {background-color:$beta-colour;}
@@ -137,6 +141,8 @@ $backlog-colour: $purple;
 .column-fifth {
   box-sizing:border-box;
   padding:0 15px;
-  float:left;
-  width:20%;
+  @media (min-width: 640px) {
+    float:left;
+    width:20%;
+  }
 }
