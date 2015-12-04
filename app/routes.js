@@ -53,8 +53,13 @@ var phase_order = ['backlog','discovery','alpha','beta','live'];
     _.each(data, function(value, key, list)
     {
       var item = _.groupBy(value,'phase');
-      newd[key] = item;
-      loc_order.push(key);
+      newd[key] = {};
+      loc_order.push(key);      
+      _.each(item, function(v,k,l)
+      {        
+        var piece = _.groupBy(v,'facing');
+        newd[key][k] = piece;
+      });
     });
 
     loc_order.sort();
