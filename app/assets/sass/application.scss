@@ -22,6 +22,8 @@
 }
 #footer {display:none}
 
+$backlog-colour: $purple;
+
 /*
   Top of the page phase banner bits.
 */
@@ -33,6 +35,7 @@
   text-decoration:none;
   text-transform:uppercase;
 }
+.tag.backlog   {background-color:$backlog-colour}
 .tag.discovery {background-color:$discovery-colour;}
 .tag.alpha     {background-color:$alpha-colour;}
 .tag.beta      {background-color:$beta-colour;}
@@ -46,6 +49,7 @@
 /*
   Convienience classes for colouring text.
 */
+.txt-backlog    {color:$backlog-colour}
 .txt-discovery  {color:$discovery-colour}
 .txt-alpha      {color:$alpha-colour}
 .txt-beta       {color:$beta-colour}
@@ -129,4 +133,10 @@
   border-radius:50% 50%;
   display:inline-block;
   margin:0;
+}
+.column-fifth {
+  box-sizing:border-box;
+  padding:0 15px;
+  float:left;
+  width:20%;
 }
