@@ -35,7 +35,7 @@ _.each(t,function(el)
 
 // Application settings
 app.set('view engine', 'html');
-app.set('views', [__dirname + '/app/views', __dirname + '/lib/']);
+app.set('views', [__dirname + '/app/views/', __dirname + '/lib/']);
 
 // Middleware to serve static assets
 app.use('/public', express.static(__dirname + '/public'));
@@ -76,12 +76,17 @@ app.get(/^\/([^.]+)$/, function (req, res)
 {
   console.log('default');
 	var path = (req.params[0]);
-	res.render(path, function(err, html) {
+
+  // remove the trailing slash because it seems nunjucks doesn't expect it.
+  if (path.substr(-1) === '/') path = path.substr(0, path.length - 1);
+
+	res.render(path, function(err, html) 
+  {
 		if (err) {
-			res.render(path + "/index", function(err2, html){
+			res.render(path + "index", function(err2, html)
+      {
         if (err2) {
-          console.log(err);
-          res.status(404).send(err).send(err2);
+          res.status(404).send(path+'<br />'+err+'<br />'+err2);
         } else {
           res.end(html);
         }
