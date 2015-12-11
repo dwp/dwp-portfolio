@@ -114,6 +114,14 @@ $backlog-colour: $purple;
 .circle.beta      {background-color:$beta-colour;}
 .circle.live      {background-color:$live-colour;}
 
+.phase_modifier {
+  font-size:16px;
+  position:absolute;
+  top:24px; left:0;
+  width:100%;
+  text-align:center;
+  color:white;
+}
 .phase-circle {
   width:40%;
   position:relative;

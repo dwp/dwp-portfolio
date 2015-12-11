@@ -35,6 +35,7 @@
 
 			<div class="phase-circle">
 				<p class="circle {{ data.phase | lower }}"></p>
+				{% if data.phase_modifier %}<p class="phase_modifier">{{ data.phase_modifier }}</p>{% endif %}
 				<p class="circle-label">{{ data.phase | title }}</p>
 			</div>
 
