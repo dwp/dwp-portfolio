@@ -19,25 +19,16 @@
 
 			<h2 class="heading-medium">Project history</h2>
 			<div class="phase-history">
-				<div class="phase-history-item border-discovery txt-discovery">
-					<h3><a href="#" class="tag tag-history discovery">discovery</a></h3>
-					<p>Completed: Discovery — Sep 2013</p>
-				</div>
-				<div class="phase-history-item border-alpha txt-alpha">
-					<h3><a href="#" class="tag tag-history alpha">alpha</a></h3>
-					<p>Completed: Alpha — Sep 2013</p>
-				</div>
-				<div class="phase-history-item border-beta txt-beta">
-					<h3><a href="#" class="tag tag-history beta">beta</a></h3>
-					<p>Completed: Beta — Sep 2013</p>
-				</div>
-
-				<div class="phase-history-item border-live txt-live">
-					<h3><a href="#" class="tag tag-history live">live</a></h3>
-					<p>Completed: Live — Sep 2013</p>
-				</div>
-
-
+				{% for phase in phase_order %}
+					{% if data["phase-history"][phase].length %}
+					<div class="phase-history-item border-{{phase}} txt-{{phase}}">
+						<h3><a href="#" class="tag tag-history {{phase}}">{{phase}}</a></h3>
+						{% for item in data["phase-history"][phase] %}
+							<p>{{ item.label }} &mdash; {{item.date}}</p>
+						{% endfor %}				
+					</div>
+					{% endif %}
+				{% endfor %}
 			</div>
 		</section>
 		<section class="column-third">

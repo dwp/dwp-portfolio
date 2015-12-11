@@ -117,7 +117,10 @@ router.get('/priority/', function (req, res)
 router.get('/projects/:id/:slug', function (req, res) 
 {    
   var data = _.findWhere(req.app.locals.data, {id:parseInt(req.params.id)});
-  res.render('project', {"data":data});  
+  res.render('project', {
+    "data":data,
+    "phase_order":phase_order,
+  });  
 });
 
 module.exports = router;

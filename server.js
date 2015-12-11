@@ -15,7 +15,6 @@ var path        = require('path'),
   Load all the project data from the files.
 */
 var defaults = JSON.parse(fs.readFileSync(__dirname + '/lib/projects/defaults.js').toString());
-console.log(defaults);
 
 var t = fs.readdirSync(__dirname + '/lib/projects/');
 app.locals.data = [];
