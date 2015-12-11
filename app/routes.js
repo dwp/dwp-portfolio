@@ -21,6 +21,13 @@ var priority_order = [
       'Low'
     ];
 
+var priority_descriptions = {
+      "Top":"Helping people return to work through Universal Credit and solving urgent problems that affect the whole department.",
+      "High":"Helping people prepare for retirement and manage their debt.",
+      "Medium":"Helping people apply for and get existing products across the department.",
+      "Low":"Non-urgent services and those that have short-term benefit."
+    };
+
 /*
   A way to force the ordering of the phases.
 */
@@ -106,7 +113,8 @@ router.get('/priority/', function (req, res)
     "counts":phases, 
     "view":"priority",
     "theme_order":priority_order,
-    "phase_order":phase_order
+    "phase_order":phase_order,
+    "priority_descriptions":priority_descriptions
     }
   );  
 });

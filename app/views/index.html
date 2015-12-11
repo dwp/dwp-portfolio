@@ -47,6 +47,10 @@
 
 		{% set item = data[name] %}
 		<h2 class="heading-large service-area">{{ name }}</h2>
+
+		{% if view == 'priority' %}
+		<p>{{ priority_descriptions[name] }}</p>
+		{% endif %}
 		
 		<div class="grid-row">	
 		{% for phase in phase_order %}
