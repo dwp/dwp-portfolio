@@ -1,0 +1,17 @@
+{
+  "id":30,
+  "name":"Service Differentiation",
+  "description": "Discovery will look at how we can conduct the habitual residency test more efficiently.",
+  "theme": "Universal Credit",
+  "location": "TBC",
+  "phase":"backlog",
+  "sro":"TBC",
+  "service_man":"TBC",
+  "facing":"internal",
+  "phase-history":{
+    "discovery": [
+      {"label":"Predicted Start Date", "date": "TBC"}
+    ]
+  },
+  "priority":"Top"
+}
