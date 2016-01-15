@@ -1,6 +1,6 @@
 {
   "id":29,
-  "name":"Telephony Identity Assurance",
+  "name":"Telephony identity assurance",
   "description": "Discovery will look at how we can validate customers identities over the phone more efficiently .",
   "theme": "Platforms",
   "location": "Stockport",
@@ -10,7 +10,7 @@
   "facing":"internal",
   "phase-history":{
     "discovery": [
-      {"label":"Predicted Start Date", "date": "TBC"}
+      {"label":"Predicted start date", "date": "TBC"}
     ]
   },
   "priority":"High"
