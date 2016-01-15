@@ -1,6 +1,6 @@
 {
   "id":30,
-  "name":"Habitual Residency Test",
+  "name":"Habitual residency test",
   "description": "Discovery will look at how we can conduct the habitual residency test more efficiently.",
   "theme": "Universal Credit",
   "location": "TBC",
@@ -10,7 +10,7 @@
   "facing":"internal",
   "phase-history":{
     "discovery": [
-      {"label":"Predicted Start Date", "date": "TBC"}
+      {"label":"Predicted start Date", "date": "TBC"}
     ]
   },
   "priority":"Top"
