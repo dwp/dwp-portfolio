@@ -1,7 +1,7 @@
 {
   "id":29,
   "name":"Telephony identity assurance",
-  "description": "Discovery will look at how we can validate customers identities over the phone more efficiently .",
+  "description": “How non-digital users can validate their identity.",
   "theme": "Platforms",
   "location": "Stockport",
   "phase":"backlog",
