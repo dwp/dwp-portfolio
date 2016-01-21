@@ -1,7 +1,7 @@
 {
   "id":30,
   "name":"Habitual residency test",
-  "description": “How users demonstrate they have the right to live in the UK and intend to settle in the UK, Isle of Man, Channel Islands, or Ireland so that they can access DWP services.”,
+  "description": “Looking at how users can demonstrate they have the right to live in the UK and intend to settle in the UK, Isle of Man, Channel Islands, or Ireland so they can access DWP services.”,
   "theme": "Universal Credit",
   "location": "TBC",
   "phase":"backlog",
