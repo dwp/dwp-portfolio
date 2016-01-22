@@ -4,9 +4,17 @@
 // Take a look at patterns.scss to see which files are imported.
 @import 'patterns';
 
+#global-header #logo {
+  font-size:16px;line-height:1.8;padding-left:5px;
+  @media (min-width:480px) {font-size:19px; line-height:30px}
+  @media (min-width:640px) {font-size:24px; }
+  @media (min-width:960px) {font-size:30px; }
+
+}
+
 /*
-  Little tag in header.    
-*/  
+  Little tag in header.
+*/
 .alpha-tag {
   background-color:$alpha-colour;
   color:white;
@@ -27,7 +35,7 @@ $backlog-colour: $purple;
 /*
   Top of the page phase banner bits.
 */
-.tag {  
+.tag {
   color:white !important;
   font-weight:700;
   padding:0.25em;
@@ -57,14 +65,14 @@ $backlog-colour: $purple;
 /*
   Lists of links
 */
-.link-list {    
-  font-size:16px;  
+.link-list {
+  font-size:16px;
   margin-bottom:5px;
   background-color:$highlight-colour;
   border-left:3px solid transparent;
   li {
     // margin-bottom:1em;
-    padding:10px;    
+    padding:10px;
   }
 }
 
@@ -86,7 +94,7 @@ $backlog-colour: $purple;
 .phase-history {
   clear:both;
   margin-top:30px;
-} 
+}
 
 .phase-history-item {
   padding-left:10px;
