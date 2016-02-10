@@ -2,15 +2,15 @@
   "id":30,
   "name":"Habitual residency test",
   "description": "Looking at how users can demonstrate they have the right to live in the UK and intend to settle in the UK, Isle of Man, Channel Islands, or Ireland so they can access DWP services.",
-  "theme": "Universal Credit",
-  "location": "TBC",
+  "theme": "Platforms & Enabling Services",
+  "location": "Stockport",
   "phase":"backlog",
-  "sro":"TBC",
+  "sro":"Nic Harrison",
   "service_man":"TBC",
   "facing":"internal",
   "phase-history":{
     "discovery": [
-      {"label":"Predicted start date", "date": "TBC"}
+      {"label":"Predicted start date", "date": "April 2016"}
     ]
   },
   "priority":"Top"
