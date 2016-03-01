@@ -73,7 +73,6 @@ if (typeof(routes) != "function"){
 // auto render any view that exists
 app.get(/^\/([^.]+)$/, function (req, res)
 {
-  console.log('default');
 	var path = (req.params[0]);
 
   // remove the trailing slash because it seems nunjucks doesn't expect it.
