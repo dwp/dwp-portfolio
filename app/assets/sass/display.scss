@@ -5,19 +5,23 @@ $backlog-colour: $purple;
 /*
   Layout stuff.
 */
-html,body { height: 100%; margin: 0px; padding: 0px; }
+html,body { height: 100%; margin: 0px; padding: 0px; overflow:hidden }
 #content {
   width:100%;
   height:100%;
   position:relative;
   margin-bottom:0;padding-bottom:0;
   max-width:none;
+  overflow:hidden;
   background-color:$turquoise;
   &.phase-backlog { background-color:$backlog-colour;}
   &.phase-discovery { background-color:$discovery-colour;}
   &.phase-alpha { background-color:$alpha-colour;}
   &.phase-beta { background-color:$beta-colour;}
   &.phase-live { background-color:$live-colour;}
+
+
+    margin:0 auto;
 }
 #display {
   position:absolute;
