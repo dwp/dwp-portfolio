@@ -1,0 +1,23 @@
+{
+  "id":32,
+  "name":"Fit Notes",
+  "description": "Looking at how to get Fit Note information into the department more quickly to ensure customers receive the support they need.",
+  "theme": "Health & Disability",
+  "location": "Leeds",
+  "phase":"discovery",
+  "sro":"TBC",
+  "service_man":"Liz Whitefield",
+  "phase-history":{
+    "discovery": [
+      {"label":"Started", "date": "January 2016"}
+    ],
+  "alpha": [
+      {"label":"Predicted", "date": "April 2016"}
+    ],
+    "beta": [
+      {"label":"Predicted start date", "date": "TBC"}
+    ]
+  },
+  
+  "priority":"Low"
+}
