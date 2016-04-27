@@ -132,6 +132,23 @@ router.get('/projects/:id/:slug', function (req, res)
 });
 
 /*
+  - - - - - - - - - -  PROTOTYPE REDRIECT - - - - - - - - - -
+*/
+router.get('/projects/:id/:slug/prototype', function (req, res)
+{
+  var id = req.params.id;
+  var data = _.findWhere(req.app.locals.data, {id:parseInt(id)});
+  if (typeof data.prototype == 'undefined')
+  {
+    res.render('no-prototype',{
+      "data":data,
+    });
+  } else {
+    res.redirect(data.prototype);
+  }
+});
+
+/*
   - - - - - - - - - -  ALL THE DATA AS JSON - - - - - - - - - -
 */
 
