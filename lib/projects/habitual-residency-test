@@ -7,7 +7,7 @@
   "phase":"discovery",
   "sro":"Nic Harrison",
   "service_man":"TBC",
-  "facing":"internal",
+  "facing":"external",
   "phase-history":{
     "discovery": [
       {"label":"Started", "date": "April 2016"}
