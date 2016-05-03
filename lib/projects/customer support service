@@ -4,7 +4,7 @@
   "description": "To provide the new state pension information for users who are unable to use the digital service",
   "theme": "Retirement Provision",
   "location": "Newcastle",
-  "phase":"alpha",
+  "phase":"beta",
   "sro":"Kevin Cunnington",
   "service_man":"Joy Bramfitt-Wanless",
   "facing":"internal",
@@ -16,7 +16,7 @@
       {"label":"Completed", "date": "April 2016"}
     ],
     "beta": [
-      {"label":"predicted", "date": "April 2016"}
+      {"label":"Started", "date": "April 2016"}
     ]
     },
   "priority":"Top"
