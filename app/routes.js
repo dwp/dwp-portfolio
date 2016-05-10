@@ -6,7 +6,7 @@ var express = require('express'),
   A way to force the ordering of the themes.
 */
 var theme_order = [
-      'Universal Credit',
+      // 'Universal Credit',
       'Health & Disability',
       'Working Age',
       'Retirement Provision',
