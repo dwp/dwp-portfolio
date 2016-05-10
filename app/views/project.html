@@ -17,6 +17,12 @@
 
 			<div class="location">Based in <strong>{{ data.location }}</strong></div>
 
+			{% if data.video %}
+			<div style="margin-top:30px;">
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/{{ data.video }}" frameborder="0" allowfullscreen></iframe>
+			</div>
+			{% endif %}
+
 			<h2 class="heading-medium">Project history</h2>
 			<div class="phase-history">
 				{% for phase in phase_order %}
@@ -38,6 +44,12 @@
 				{% if data.phase_modifier %}<p class="phase_modifier">{{ data.phase_modifier }}</p>{% endif %}
 				<p class="circle-label">{{ data.phase | title }}</p>
 			</div>
+
+			{% if data.liveservice %}
+			<br />
+			<p><a href="{{ data.liveservice }}">Apply for Carer’s Allowance</a></p>
+			{% endif %}
+			<hr />
 
 			<h3 class="heading-small">Senior Responsible Officer</h3>
 			<p>{{ data.sro | default('Not set') }}</p>
