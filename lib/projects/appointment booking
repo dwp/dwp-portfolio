@@ -2,7 +2,7 @@
   "id":31,
   "name":"Appointment Booking",
   "description": "Providing the ability for agents to book appointments for users (including self-service appointment booking)",
-  "theme": "Working Age",
+  "theme": "Platforms",
   "location": "Leeds",
   "phase":"alpha",
   "sro":"Neil Couling",
