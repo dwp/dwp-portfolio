@@ -1,3 +1,3 @@
-# DWP Digital Service Portfolio
+# Defra Digital Service Portfolio
 
 [Take a look](http://dwp-digital-services.herokuapp.com/)
