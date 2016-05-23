@@ -8,7 +8,7 @@
 
 <main id="content" role="main">
 
-	<h1 class="heading-xlarge" style="margin-bottom:15px;">{{ data.name }}</h1>
+	<h1 class="heading-xlarge" style="margin-bottom:15px;">{% if data.service %}<a href="{{ data.service }}">{% endif %}{{ data.name }}{% if data.service %}</a>{% endif %}</h1>
 
 	<div class="grid-row">
 		<section class="column-two-thirds">
@@ -50,9 +50,9 @@
 				<p class="circle-label">{{ data.phase | title }}</p>
 			</div>
 
-			{% if data.liveservice %}
+			{% if data.service %}
 			<br />
-			<p><a href="{{ data.liveservice }}">Live service</a></p>
+			<p><a href="{{ data.service }}">Service</a></p>
 			{% endif %}
 			<hr />
 

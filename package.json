@@ -1,8 +1,7 @@
 {
-  "name": "express-prototype",
-  "description": "GOVUK prototyping app in Express",
-  "version": "0.1.0",
-  "private": true,
+  "name": "Defra-Portfolio",
+  "description": "Web app for defra portfolio",
+  "version": "0.0.1",
   "engines": {
     "node": "4.x"
   },
