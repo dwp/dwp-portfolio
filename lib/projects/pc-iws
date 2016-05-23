@@ -1,0 +1,24 @@
+{
+  "id":203,
+  "name":"Apply for an International Waste Shipment notification",
+  "description": "Supporting businesses apply for an international waste shipments notification.",
+  "theme": "Permissions & Compliance Services",
+  "location": "Warrington",
+  "phase":"beta",
+  "phase_modifier":"public",
+  "sro":"David Goodwin",
+  "service_man":"Sarah Slack",
+  "phase-history":{
+    "discovery": [
+      {"label":"Completed", "date": "April 2015"}
+    ],
+    "alpha": [
+      {"label":"Completed", "date": "September 2015"}
+    ],
+    "beta": [
+      {"label":"Public beta released", "date": "January 2016"}
+    ]
+  },
+  "priority":"Low",
+  "service":"https://international-waste-shipments.service.gov.uk/account/login"
+  }
