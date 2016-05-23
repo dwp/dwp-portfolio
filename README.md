@@ -2,4 +2,10 @@
 
 [Take a look](http://defra-digital-services.herokuapp.com/)
 
-Code has been branched from https://github.com/dwpdigitaltech/dwp-portfolio
+## Adding a new project
+
+Projects are configuration based in /lib/projects/
+
+Take a look at defaults.js for a template of what a project should contain.
+
+Create a unique project file eg project.js copy in the configuration, give the project a unique ID
