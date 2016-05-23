@@ -3,7 +3,7 @@
   "name":"Apply for an International Waste Shipment notification",
   "description": "Supporting businesses apply for an international waste shipments notification.",
   "theme": "Permissions & Compliance Services",
-  "location": "Warrington",
+  "location": "Sheffield",
   "phase":"beta",
   "phase_modifier":"public",
   "sro":"David Goodwin",
@@ -16,7 +16,8 @@
       {"label":"Completed", "date": "September 2015"}
     ],
     "beta": [
-      {"label":"Public beta released", "date": "January 2016"}
+      {"label":"Beta started", "date": "October 2015"},
+      {"label":"Public beta released", "date": "March 2016"}
     ]
   },
   "priority":"Low",
