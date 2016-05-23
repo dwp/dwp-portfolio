@@ -2,7 +2,7 @@
   "id":301,
   "name":"Victor",
   "description": "To support vets in registering and tracking infection / disease samples.",
-  "theme": "Monitoring & Tracking Services",
+  "theme": "Animal Monitoring & Tracking Services",
   "location": "Weybridge",
   "phase":"beta",
   "phase_modifier":"public",
