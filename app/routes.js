@@ -6,7 +6,13 @@ var express = require('express'),
   A way to force the ordering of the themes.
 */
 var theme_order = [
-      'Incidents & Assets'
+      'Strategic outcome reviews',
+      'Incidents & Assets Services',
+      'Permissions & Compliance Services',
+      'Monitoring Services',
+      'Animal Movement & Tracking Services',
+      'Cross Defra Services',
+      'Architectural Runway; Common Services'
     ];
 
 var priority_order = [
