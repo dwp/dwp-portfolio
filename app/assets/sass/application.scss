@@ -194,12 +194,17 @@ $backlog-colour: $purple;
   @include core-16;
   border-left:5px solid $turquoise;
   padding-left:10px;
-  margin-top:45px;
+  margin-top:0px;
   padding-top:5px;
   li {margin-bottom:5px;}
+  
+  @media (min-width: 641px){
+    margin-top:45px;
+  }
 }
 .project-links {
   vertical-align: bottom;
+  margin-bottom:10px;
 }
 .category-heading {
   margin:45px 0 30px;
