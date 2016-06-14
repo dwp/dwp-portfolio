@@ -191,6 +191,7 @@ $backlog-colour: $purple;
   margin-top:10px;
 }
 .project-team {
+  @include core-16;
   border-left:5px solid $turquoise;
   padding-left:10px;
   margin-top:45px;
