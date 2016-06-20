@@ -14,7 +14,7 @@
     ],
     "alpha": [
       {"label":"Started", "date": "June 2016"}
-    ],
+    ]
   },
   "priority":"Top",
   "prototype":"https://ucddp.herokuapp.com/"
