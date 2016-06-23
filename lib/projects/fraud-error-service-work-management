@@ -4,7 +4,7 @@
   "description": "Looking at how the Fraud and Error Service manage fraud, error and risk referrals, by improving business processes and the quality of interventions.",
   "theme": "Fraud & Debt",
   "location": "Stockport",
-  "phase":"Alpha",
+  "phase":"alpha",
   "phase_modifier":"Private",
   "sro":"Jon Fundry",
   "service_man":"Gary Wainwright",
