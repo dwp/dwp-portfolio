@@ -4,12 +4,15 @@
   "description": "Looking at how users can demonstrate they have the right to live in the UK and intend to settle in the UK, Isle of Man, Channel Islands, or Ireland so they can access DWP services.",
   "theme": "Platforms",
   "location": "Stockport",
-  "phase":"discovery",
+  "phase":"alpha",
   "sro":"Nic Harrison",
   "service_man":"TBC",
    "phase-history":{
     "discovery": [
-      {"label":"Started", "date": "April 2016"}
+      {"label":"Completed", "date": "May 2016"}
+      ],
+    "alpha": [
+      {"label":"Started", "date": "June 2016"}
     ]
   },
   "priority":"Top"
