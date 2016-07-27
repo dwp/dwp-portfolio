@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+	<h1 class="heading-xxlarge" style="margin-bottom:60px;">Stand ups</h1>
+	
+	{% for item in standups %}
+	  <div class="standup">
+			<p>{{ item.date | formatDate("h:mma dddd, MMMM Do YYYY") }}</p>
+			<p>{{ item.name }}</p>
+		</div>
+	{% endfor %}
+
+</main>
+
+{% endblock %}

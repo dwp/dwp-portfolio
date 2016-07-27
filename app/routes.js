@@ -1,5 +1,7 @@
 var express = require('express'),
     router  = express.Router(),
+    moment  = require('moment'),
+    tog     = require(__dirname + "/../lib/tog.js"),
     _       = require('underscore');
 
 /*
@@ -164,6 +166,29 @@ router.get('/api/:id', function (req, res) {
   } else {
     res.json({error: 'ID not found'});
   }
+});
+
+router.get('/standups/', function (req, res, next) {
+  var data = _.compact(_.map(req.app.locals.data,function(el)
+  {
+    if (el.standups) return { "name":el.name, "standups":el.standups, "id":el.id  }
+  }))
+  var newdata = [];
+  _.each(data, function(el)
+  {
+    _.each(el.standups, function(sup)
+    {
+        newdata.push({
+          "name":el.name,
+          "date":moment(sup, "D-MMMM-YYYY, HH:mm"),
+          "id":el.id,
+        })
+    })
+  })
+  req.data = req.data || {};
+  req.data.standups = _.sortBy(newdata, "date");
+  next();
+  // res.end(tog(newdata))
 });
 
 module.exports = router;
