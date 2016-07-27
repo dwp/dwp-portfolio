@@ -5,6 +5,7 @@ var path        = require('path'),
     browserSync = require('browser-sync'),
     nunjucks    = require('express-nunjucks'),
     _           = require('underscore'),
+    moment      = require('moment'),
     routes      = require(__dirname + '/app/routes.js'),
     dis_routes  = require(__dirname + '/app/views/display/routes.js'),
     favicon     = require('serve-favicon'),
@@ -47,6 +48,9 @@ nunjucks.setup({
 }, app, function(env) {
   env.addFilter('slugify', function(str) {
       return str.replace(/[.,-\/#!$%\^&\*;:{}=\-_`~()’]/g,"").replace(/ +/g,'_').toLowerCase();
+  });
+  env.addFilter('formatDate', function(str,format) {
+      return moment(str).format(format);
   });
 });
 

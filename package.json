@@ -28,6 +28,7 @@
     "marked": "^0.3.5",
     "merge": "^1.2.0",
     "minimist": "0.0.8",
+    "moment": "^2.14.1",
     "node-sass": "3.3.3",
     "readdir": "0.0.6",
     "serve-favicon": "2.3.0",
