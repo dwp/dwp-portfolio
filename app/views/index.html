@@ -9,7 +9,7 @@
 <main id="content" role="main">
 
 	<p style="margin-top:30px;">
-		These are all the things we're doing 
+		These are all the things we're doing
 		{% if view != 'theme' %}(<a href="/">order by theme</a>){% endif %}
 		{% if view != 'location' %}(<a href="/location/">order by location</a>){% endif %}
 		{% if view != 'priority' %}(<a href="/priority/">order by priority</a>){% endif %}
@@ -51,22 +51,22 @@
 		{% if view == 'priority' %}
 		<p>{{ priority_descriptions[name] }}</p>
 		{% endif %}
-		
-		<div class="grid-row">	
+
+		<div class="grid-row">
 		{% for phase in phase_order %}
-			
+
 			<section class="column-fifth">
-			{% if item[phase] %}			
-				
+			{% if item[phase] %}
+
 				<ul class="link-list border-{{phase}}">
 				{% for bit in item[phase]['user'] %}
-					<li><a href="/projects/{{ bit.id }}/{{ bit.name | slugify }}">{{ bit.name }}</a></li>							
+					<li><a href="/projects/{{ bit.id }}/{{ bit.name | slugify }}">{{ bit.name }}</a></li>
 				{% endfor %}
 				</ul>
 
 				<ul class="link-list border-internal">
 				{% for bit in item[phase]['internal'] %}
-					<li><a href="/projects/{{ bit.id }}/{{ bit.name | slugify }}">{{ bit.name }}</a></li>							
+					<li><a href="/projects/{{ bit.id }}/{{ bit.name | slugify }}">{{ bit.name }}</a></li>
 				{% endfor %}
 				</ul>
 
