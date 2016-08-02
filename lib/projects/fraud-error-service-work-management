@@ -12,10 +12,10 @@
       {"label":"Completed", "date": "May 2016"}
     ],
     "alpha": [
-      {"label":"Started", "date": "May 2016"}
+      {"label":"Completed", "date": "July2016"}
     ],
     "beta": [
-      {"label":"Predicted start date", "date": "July 2016"}
+      {"label":"Predicted start date", "date": "August 2016"}
     ]
       },
   "priority":"Medium"
