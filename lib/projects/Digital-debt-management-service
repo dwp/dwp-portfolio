@@ -1,7 +1,7 @@
 {
   "id":34,
   "name":"Digital Debt Management Service",
-  "description": "Lets people who owe money to DWP easily find out about their debt and arrange repayment.",
+  "description": "Let’s people who owe money to DWP easily find information, understand their debt position, plan for and make repayments.",
   "theme": "Fraud & Debt",
   "location": "Stockport",
   "phase":"alpha",
@@ -16,5 +16,5 @@
     ]
       },
   "priority":"High",
-  "prototype":"https://dev-dwp-debt.herokuapp.com/"
+  "prototype":"https://shielded-journey-99247.herokuapp.com/"
 }
