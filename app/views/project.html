@@ -57,6 +57,19 @@
 
 			<h3 class="heading-small">Service Manager</h3>
 			<p>{{ data.service_man | default('Not set') }}</p>
+			
+			<hr />
+			
+			<h3 class="heading-small">Upcoming show &lsquo;n&rsquo; tells</h3>
+			<ul>
+				{% for item in data.showntells %}
+				  <li style="margin-bottom:10px">
+						{{ item | formatDate("h:mma ddd") }} &mdash;
+				  	{{ item | formatDate("Do MMMM") }}
+					</li>
+				{% endfor %}
+				<li></li>
+			</ul>
 
 			<!--<h3 class="heading-small">Prototype Link</h3>
 			<p><a href="{{ data.prototype | default('#') }}">{{ data.prototype | default('http://not.set/') }}</a></p>-->

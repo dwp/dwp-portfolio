@@ -168,27 +168,68 @@ router.get('/api/:id', function (req, res) {
   }
 });
 
-router.get('/standups/', function (req, res, next) {
-  var data = _.compact(_.map(req.app.locals.data,function(el)
+router.get('/showntells/all/:loc?', function (req, res, next)
+{
+  var loc = req.params.loc;
+
+  var data = [];
+  _.each(req.app.locals.data, function(el)
   {
-    if (el.standups) return { "name":el.name, "standups":el.standups, "id":el.id  }
-  }))
-  var newdata = [];
-  _.each(data, function(el)
-  {
-    _.each(el.standups, function(sup)
+    if (el.showntells)
+    _.each(el.showntells, function(sup)
     {
-        newdata.push({
+      if (loc && loc !== el.location) {}
+      else {
+        data.push({
           "name":el.name,
-          "date":moment(sup, "D-MMMM-YYYY, HH:mm"),
+          "date":moment(sup, "D MMMM YYYY, HH:mm"),
           "id":el.id,
+          "location":el.location,
         })
+      }
     })
   })
+
   req.data = req.data || {};
-  req.data.standups = _.sortBy(newdata, "date");
+  req.data.all = true;
+  req.data.loc = loc;
+  req.data.showntells = _.sortBy(data, "date");
+
+  req.url = '/showntells';
   next();
   // res.end(tog(newdata))
 });
+
+router.get('/showntells/today/:loc?', function (req, res, next)
+{
+  var loc = req.params.loc;
+  var data = [];
+  _.each(req.app.locals.data, function(el)
+  {
+    if (el.showntells)
+    _.each(el.showntells, function(sup)
+    {
+        supdate = moment(sup, "D MMMM YYYY, HH:mm");
+        if (supdate.isSame(moment(), 'day'))
+        {
+          if (loc && loc !== el.location) {}
+          else {
+            data.push({
+              "name":el.name,
+              "date":supdate,
+              "id":el.id,
+              "location":el.location,
+            })
+          }
+        }
+    })
+  })
+  req.data = req.data || {};
+  req.data.today = true;
+  req.data.loc = loc;
+  req.data.showntells = _.sortBy(data, "date");
+  req.url = '/showntells';
+  next();
+})
 
 module.exports = router;

@@ -52,6 +52,10 @@ nunjucks.setup({
   env.addFilter('formatDate', function(str,format) {
       return moment(str).format(format);
   });
+  env.addFilter('log', function log(a) {
+    var nunjucksSafe = env.getFilter('safe');
+  	return nunjucksSafe('<script>console.log(' + JSON.stringify(a, null, '\t') + ');</script>');
+  });
 });
 
 // Elements refers to icon folder instead of images folder
