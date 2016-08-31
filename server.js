@@ -16,12 +16,12 @@ var path        = require('path'),
 /*
   Load all the project data from the files.
 */
-var defaults = JSON.parse(fs.readFileSync(__dirname + '/lib/projects/defaults.js').toString());
+var defaults = JSON.parse(fs.readFileSync(__dirname + '/lib/projects/defaults.json').toString());
 var files = fs.readdirSync(__dirname + '/lib/projects/');
 app.locals.data = [];
 _.each(files,function(el)
 {
-  if (el == 'defaults.js') return;
+  if (el == 'defaults.json') return;
   var file = fs.readFileSync(__dirname + '/lib/projects/'+el).toString();
   try {
     var json = merge(true,defaults,JSON.parse(file));
