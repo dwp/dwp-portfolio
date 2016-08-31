@@ -193,6 +193,7 @@ router.get('/showntells/all/:loc?', function (req, res, next)
   req.data = req.data || {};
   req.data.all = true;
   req.data.loc = loc;
+  req.data.places = _.unique(_.pluck(req.app.locals.data,'location'));
   req.data.showntells = _.sortBy(data, "date");
 
   req.url = '/showntells';
@@ -227,6 +228,7 @@ router.get('/showntells/today/:loc?', function (req, res, next)
   req.data = req.data || {};
   req.data.today = true;
   req.data.loc = loc;
+  req.data.places = _.unique(_.pluck(req.app.locals.data,'location'));
   req.data.showntells = _.sortBy(data, "date");
   req.url = '/showntells';
   next();
