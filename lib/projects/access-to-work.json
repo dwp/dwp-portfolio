@@ -23,7 +23,7 @@
   },
   "priority":"Medium",
   "prototype":"http://accesstowork.herokuapp.com/application/",
-  "standups": [
+  "showntells": [
     "2 August 2016, 14:00",
     "16 August 2016, 14:00",
     "30 August 2016, 14:00"
