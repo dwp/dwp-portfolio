@@ -22,4 +22,9 @@
   },
   "priority":"High",
   "prototype":"https://getyourstatepension.herokuapp.com/"
+  "showntells": [
+    "14 September 2016, 12:00",
+    "26 October 2016, 12:00",
+    "7 December 2016, 12:00"
+  ]
 }
