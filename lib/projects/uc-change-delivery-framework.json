@@ -4,7 +4,7 @@
   "description":"Supporting the delivery of new DWP services in a simple, adaptable and repeatable way",
   "theme": "Platforms",
   "location": "Leeds",
-  "phase":"alpha",
+  "phase":"beta",
   "sro":"Neil Couling",
   "service_man":"Erica Thompson",
   "facing":"internal",
@@ -13,8 +13,11 @@
       {"label":"Completed", "date": "May 2016"}
     ],
     "alpha": [
-      {"label":"Started", "date": "June 2016"}
-    ]
+      {"label":"Completed", "date": "August 2016"}
+    ],
+   "beta": [
+      {"label":"Started", "date": "August 2016"}
+    ], 
   },
   "priority":"Top",
   "prototype":"https://ucddp.herokuapp.com/"
