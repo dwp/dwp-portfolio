@@ -5,6 +5,7 @@
   "theme": "Platforms",
   "location": "Leeds",
   "phase":"beta",
+  "phase_modifier":"Build",
   "sro":"Neil Couling",
   "service_man":"Erica Thompson",
   "facing":"internal",
@@ -17,7 +18,7 @@
     ],
    "beta": [
       {"label":"Started", "date": "August 2016"}
-    ], 
+    ] 
   },
   "priority":"Top",
   "prototype":"https://ucddp.herokuapp.com/"
