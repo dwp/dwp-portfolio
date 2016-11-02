@@ -22,6 +22,6 @@
       {"label":"Public beta predicted", "date": "January 2017"}
     ]
   },
-  "priority":"High",
+  "priority":"TBC",
   "prototype":"http://ds1500.herokuapp.com/"
 }

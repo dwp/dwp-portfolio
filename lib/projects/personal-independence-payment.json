@@ -21,6 +21,6 @@
       {"label":"Public beta predicted", "date": "TBC"}
     ]
   },
-  "priority":"Medium",
+  "priority":"TBC",
   "prototype":"http://pip-v2.herokuapp.com/"
 }
