@@ -4,20 +4,22 @@
   "description": "Looking at how to get Fit Note information into the department more quickly to ensure customers receive the support they need.",
   "theme": "Health & Disability",
   "location": "Leeds",
-  "phase":"alpha",
-  "sro":"Kenny Robertson",
-  "service_man":"Liz Whitefield",
+  "phase":"beta",
+  "phase_modifier":"Private",
+  "sro":"James Parker",
+  "service_man":"Shaun Lynn",
   "phase-history":{
     "discovery": [
       {"label":"Completed", "date": "March 2016"}
     ],
   "alpha": [
-      {"label":"Started", "date": "April 2016"}
+      {"label":"Completed", "date": "January 2017"}
     ],
     "beta": [
-      {"label":"Predicted start date", "date": "October 2016"}
+      {"label":"Started", "date": "October 2016"},
+      {"label":"Public beta predicted start", "date": "Summer 2017"}
     ]
   },
-  
+
   "priority":"TBC"
 }

@@ -4,7 +4,8 @@
   "description": "Looking at how to help bereaved customers report and deal with changes after a death.",
   "theme": "Retirement Provision",
   "location": "Newcastle",
-  "phase":"alpha",
+  "phase":"beta",
+  "phase_modifier":"Private",
   "sro":"Graeme Wallace",
   "service_man":"Danny Mclaughlin",
   "phase-history":{
@@ -13,6 +14,10 @@
     ],
     "alpha": [
       {"label":"Started", "date": "April 2016"}
+    ],
+    "beta": [
+      {"label":"Private beta started", "date": "July 2016"},
+      {"label":"Public beta start", "date": "July 2017"}
     ]
   },
   "priority":"TBC",

@@ -59,6 +59,7 @@ $backlog-colour: $purple;
 .txt-discovery  {color:$discovery-colour}
 .txt-alpha      {color:$alpha-colour}
 .txt-beta       {color:$beta-colour}
+.txt-public     {color:$beta-colour}
 .txt-live       {color:$live-colour}
 /*
   Lists of links
@@ -111,6 +112,7 @@ $backlog-colour: $purple;
 .border-discovery {border-color:$discovery-colour;}
 .border-alpha     {border-color:$alpha-colour;}
 .border-beta      {border-color:$beta-colour;}
+.border-public    {border-color:$beta-colour;}
 .border-live      {border-color:$live-colour;}
 .border-internal  {border-color:$black;}
 
@@ -197,7 +199,7 @@ $backlog-colour: $purple;
   margin-top:0px;
   padding-top:5px;
   li {margin-bottom:5px;}
-  
+
   @media (min-width: 641px){
     margin-top:45px;
   }

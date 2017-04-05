@@ -5,6 +5,7 @@
   "theme": "Health & Disability",
   "location": "Leeds",
   "phase":"beta",
+  "phase_modifier":"Private",
   "sro":"Justin Russell",
   "service_man":"Adam Tostevin",
   "phase-history":{
@@ -16,8 +17,7 @@
     ],
     "beta": [
       {"label":"Started", "date": "July 2016"},
-      {"label":"Private beta started", "date": "September 2016"},
-      {"label":"Public beta predicted", "date": "February 2017"}
+      {"label":"Private beta started", "date": "September 2016"}
     ]
   },
 
