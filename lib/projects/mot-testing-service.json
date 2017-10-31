@@ -1,13 +1,13 @@
 {
   "id":1,
-  "name":"Check your State Pension",
-  "description": "Gives users a forecast of what their State Pension could be worth when they reach retirement age so that they can plan for their retirement.",
-  "theme": "Retirement Provision",
-  "location": "Newcastle",
+  "name":"MOT Testing Service",
+  "description": "System backing MOT service.",
+  "theme": "MOT",
+  "location": "Nottingham",
   "phase":"beta",
   "phase_modifier":"Public",
-  "sro":"Graeme Wallace",
-  "service_man":"Joy Bramfitt-Wanless",
+  "sro":"Alex Fiddes",
+  "service_man":"Neil Barlow",
   "phase-history":{
     "discovery": [
       {"label":"Completed", "date": "September 2014"}
@@ -21,8 +21,8 @@
       {"label":"Public beta started", "date": "February 2016"}
     ]
   },
-  "priority":"TBC",
-  "prototype":"http://nisp.herokuapp.com/",
+  "priority":"1",
+  "prototype":"http://mot-testing.service.gov.uk/",
   "showntells": [
 
   ]
