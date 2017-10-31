@@ -11,7 +11,10 @@ var path        = require('path'),
     favicon     = require('serve-favicon'),
     app         = express(),
     port        = process.env.PORT || 3100,
-    env         = process.env.NODE_ENV || 'development';
+    env         = process.env.NODE_ENV || 'development',
+    basicAuth = require('basic-auth-connect');
+
+connect().use(basicAuth('admin', 'ilovemot'));
 
 /*
   Load all the project data from the files.
