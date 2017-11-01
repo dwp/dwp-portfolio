@@ -6,3 +6,5 @@ govuk_modules
 node_modules/*
 *.sublime-*
 docs
+.idea
+npm-debug.log
