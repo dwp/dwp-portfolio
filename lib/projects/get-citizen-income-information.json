@@ -1,0 +1,23 @@
+{
+  "id":37,
+  "name":"Get Citizen Income Information",
+  "description": "Lets DWP services get citzens' income information when they need it or our Mission Statement which is Give fast, reliable access to citizens income information to enable DWP services to drive operational efficiencies, reduce fraud and error, and inform future departmental policy.",
+  "theme": "Working Age",
+  "location": "Newcastle",
+  "phase":"alpha",
+  "phase_modifier":"Public",
+  "sro":"Craig Eblett",
+  "service_man":"Alyson Atkinson",
+  "phase-history":{
+    "discovery": [
+      {"label":"Completed", "date": ""}
+    ],
+    "alpha": [
+      {"label":"Expected completion", "date": "January 2018"}
+    ],
+    "beta": [
+      {"label":"", "date": ""}
+    ]
+  },
+  "priority":"TBC"
+}
