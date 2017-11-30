@@ -7,4 +7,5 @@ node_modules/*
 *.sublime-*
 docs
 package-lock.json
-
+.idea
+.idea/

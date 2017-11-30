@@ -1,0 +1,23 @@
+{
+  "id":6,
+  "name":"TARS stabilisation",
+  "description": "Moving TARS applications to AWS",
+  "theme": "TARS",
+  "location": "Leeds/Nottingham",
+  "phase":"alpha",
+  "phase_modifier":"Private",
+  "sro":"Alex Fiddes",
+  "service_man":"TBC",
+  "phase-history":{
+    "discovery": [
+      {"label":"Started", "date": "October 2016"},
+      {"label":"Completed", "date": "January 2017"}
+    ],
+    "alpha": [
+      {"label":"Started", "date": "October 2017"},
+      {"label":"Completed", "date": "December 2017"}
+    ]
+  },
+  "priority":"1",
+  "prototype":""
+}

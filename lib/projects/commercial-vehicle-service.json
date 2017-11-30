@@ -1,0 +1,24 @@
+{
+  "id":4,
+  "name":"Commercial Vehicle Service",
+  "description": "Deliver mobile tech support for frontline staff carrying out checks on commercial vehicles.",
+  "theme": "CVS",
+  "location": "Nottingham",
+  "phase":"alpha",
+  "phase_modifier":"Private",
+  "sro":"Alex Fiddes",
+  "service_man":"Danny Charles",
+  "phase-history":{
+    "discovery": [
+      {"label":"Started", "date": "August 2016"},
+      {"label":"Completed", "date": "October 2016"}
+    ],
+    "alpha": [
+      {"label":"Started", "date": "October 2017"}
+    ]
+  },
+  "priority":"1",
+  "prototype":"",
+  "showntells": "",
+  "showntells_string" : "Every 2 weeks"
+}

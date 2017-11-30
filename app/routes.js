@@ -8,10 +8,11 @@ var express = require('express'),
   A way to force the ordering of the themes.
 */
 var theme_order = [
-      // 'Universal Credit',
       'MOT',
       'CVS',
       'VOL',
+      'TARS',
+      'Drivers & Riders',
       'CPMS'
     ];
 

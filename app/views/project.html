@@ -59,7 +59,13 @@
 			<p>{{ data.service_man | default('Not set') }}</p>
 			
 			<hr />
-			
+
+			{% if data.showntells_string %}
+			<h3 class="heading-small">Show &lsquo;n&rsquo; tell frequency</h3>
+			<p>{{ data.showntells_string }}</p>
+			{% endif %}
+
+			{% if data.showntells %}
 			<h3 class="heading-small">Upcoming show &lsquo;n&rsquo; tells</h3>
 			<ul>
 				{% for item in data.showntells %}
@@ -70,9 +76,12 @@
 				{% endfor %}
 				<li></li>
 			</ul>
+			{% endif %}
 
-			<!--<h3 class="heading-small">Prototype Link</h3>
-			<p><a href="{{ data.prototype | default('#') }}">{{ data.prototype | default('http://not.set/') }}</a></p>-->
+			{% if data.prototype %}
+			<h3 class="heading-small">Link</h3>
+			<p><a href="{{ data.prototype | default('#') }}">{{ data.prototype | default('http://not.set/') }}</a></p>
+			{% endif %}
 
 		</section>
 	</div>

@@ -1,0 +1,27 @@
+{
+  "id":2,
+  "name":"MOT Reminders",
+  "description": "SMS and email reminders for MOT due.",
+  "theme": "MOT",
+  "location": "Nottingham",
+  "phase":"beta",
+  "phase_modifier":"Public",
+  "sro":"Alex Fiddes",
+  "service_man":"Neil Barlow",
+  "phase-history":{
+    "discovery": [
+      {"label":"Started", "date": "December 2016"}
+    ],
+    "alpha": [
+      {"label":"Started", "date": "February 2017"}
+    ],
+    "beta": [
+      {"label":"Private beta started", "date": "May 2017"},
+      {"label":"Public beta completed", "date": "November 2017"}
+    ]
+  },
+  "priority":"1",
+  "prototype":"https://www.gov.uk/mot-reminder",
+  "showntells": "",
+  "showntells_string" : "Every 2nd wed - end of sprint"
+}

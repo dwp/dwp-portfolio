@@ -23,7 +23,5 @@
   },
   "priority":"1",
   "prototype":"http://mot-testing.service.gov.uk/",
-  "showntells": [
-
-  ]
+  "showntells": ""
 }
