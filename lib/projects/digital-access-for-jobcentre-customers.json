@@ -1,0 +1,22 @@
+{
+  "id":3,
+  "name":"Digital Access for Jobcentre Customers",
+  "problem":"Some people can't access the online services they need. The result is that people struggle to find and use digital services. They miss opportunities to apply for benefits and jobs, and can end up losing money.",
+    "mission": "Enable people without suitable digital access to get the access and support they need ot more independently find a job and useDWP services reliably, quickly and easily.",
+  "theme": "Working Age",
+  "location": "Leeds",
+  "phase":"alpha",
+  "sro":"Mark Richardson",
+  "service_man":"Chris Jones",
+  "phase-history":{
+    "discovery": [
+      {"label":"Completed", "date": "January 2018"}
+    ],
+  "alpha": [
+      {"label":"Expected completion", "date": "April 2018"}
+    ]
+  },
+
+   "priority":"TBC",
+   "prototype":"http://esa-digital.herokuapp.com"
+}
