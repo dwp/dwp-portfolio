@@ -21,7 +21,7 @@
             
             {% if data.description %}	
             <h2 class="heading-medium">Service Description</h2>
-            <p>{{ data.description }}</p>
+            <p>{{ data.description | default('Not set') }}</p>
             {% endif %}
 
 			{% if data.video %}
@@ -70,6 +70,11 @@
 
 			<h3 class="heading-small">Product Owner</h3>
 			<p>{{ data.service_man | default('Not set') }}</p>
+            
+            {% if data.user_rsch %}	
+			<h3 class="heading-small">User Researcher</h3>
+			<p>{{ data.user_rsch | default('Not set') }}</p>
+            {% endif %}
 			
 			<hr />
 			
