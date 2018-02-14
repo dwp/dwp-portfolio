@@ -9,9 +9,20 @@
 	<div class="grid-row">
 		<section class="column-two-thirds">
 
-			<p>{{ data.description }}</p>
-
-			<div class="location">Based in <strong>{{ data.location }}</strong></div>
+            {% if data.problem %}		
+            <h2 class="heading-medium">Problem Statement</h2>
+            <p>{{ data.problem }}</p>
+            {% endif %}
+            
+            {% if data.mission %}		
+            <h2 class="heading-medium">Mission Statement</h2>
+            <p>{{ data.mission }}</p>
+            {% endif %}
+            
+            {% if data.description %}	
+            <h2 class="heading-medium">Service Description</h2>
+            <p>{{ data.description }}</p>
+            {% endif %}
 
 			{% if data.video %}
 			<div style="margin-top:30px;" class="videoWrapper">
@@ -20,6 +31,7 @@
 			{% endif %}
 
 			<h2 class="heading-medium">Project history</h2>
+            <div class="location">Based in <strong>{{ data.location }}</strong></div>
 			<div class="phase-history">
 				{% for phase in phase_order %}
 					{% if data["phase-history"][phase].length %}
@@ -45,6 +57,7 @@
 				{% if data.phase_modifier %}<p class="phase_modifier">{{ data.phase_modifier }}</p>{% endif %}
 				<p class="circle-label">{{ data.phase | title }}</p>
 			</div>
+
 
 			{% if data.liveservice %}
 			<br />

@@ -3,7 +3,6 @@
   "name":"Digital Access for Jobcentre Customers",
   "problem":"Some people can't access the online services they need. The result is that people struggle to find and use digital services. They miss opportunities to apply for benefits and jobs, and can end up losing money.",
     "mission": "Enable people without suitable digital access to get the access and support they need to more independently find a job and use DWP services reliably, quickly and easily.",
-    "description": "Enable people without suitable digital access to get the access and support they need to more independently find a job and use DWP services reliably, quickly and easily.",
   "theme": "Working Age",
   "location": "Leeds",
   "phase":"alpha",
@@ -18,6 +17,4 @@
     ]
   },
 
-   "priority":"TBC",
-   "prototype":"http://esa-digital.herokuapp.com"
 }
