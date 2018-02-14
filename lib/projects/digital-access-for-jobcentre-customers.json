@@ -16,8 +16,6 @@
   "alpha": [
       {"label":"Expected completion", "date": "April 2018"}
     ]
-  },
+  }
 
-   "priority":"TBC",
-   "prototype":"http://esa-digital.herokuapp.com"
 }
