@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "basic-auth-connect": "1.0.0",
-    "browser-sync": "^2.10.0",
+    "browser-sync": "^3.0.3",
     "consolidate": "0.x",
     "express": "4.13.3",
     "express-nunjucks": "^0.9.5",
